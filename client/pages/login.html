@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
+    <script src="../scripts/login.js"></script>
+    <title>Fenix</title>
+</head>
+<body class="body-login">
+    <header class="header-login">
+        <div class="container-logo">
+            <figure>
+                <a href="../index.html"><img class="logo" src="../images/logo.png" alt="logo Fenix"></a>
+            </figure>
+        </div>
+        <h1>FENIX</h1>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <button id="logout-btn" style="display: none;">Logout</button>
+                </button>
+            </div>
+        </div>
+    </header>
+    <ul class="menu-login menu">
+        <li><a href="../index.html">Inicio</a></li>
+    </ul>
+    <!-- Login -->
+    <div class="container-login">
+        <form id="loginForm">
+            <label for="email">Email
+                <input type="email" name="email" id="email" placeholder="info@fenix.com">
+            </label>
+            <label for="password">Contraseña
+                <input type="password" name="password" id="password" placeholder="*********">
+            </label>
+            <a class="btn-registrarse" href="./registro.html">No eres usuario? Registresé aquí</a>
+            <button type="submit" class="btn-ingreso">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="./style/carrito.css">
+    <script type="module" src="./scripts/renderIndex.js"></script>
+    <script type="module" src="./scripts/carrito.js"></script>
+    <title>Fenix</title>
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <figure>
+                <a href="index.html"><img class="logo" src="./images/logo.png" alt="logo Fenix"></a>
+            </figure>
+        </div>
+        <h1>FENIX</h1>
+        <div class="carrito-login">
+            <figure>
+                <img class="carrito" src="./images/carrito.png" alt="carrito de compras" onclick="openCart()">
+            </figure>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <button id="logout-btn" style="display: none;">Logout</button>
+                <button class="btn-login" id="login-btn">
+                    <a href="./pages/login.html">LOGIN / REGISTRARSE</a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li>
+            <a href="#">Categorías</a>
+            <ul class="submenu">
+                <li>
+                    <a href="#">Talle</a>
+                    <ul class="submenu submenu-final">
+                        <li><a id="talleS" href="#">S</a></li>
+                        <li><a id="talleM" href="#">M</a></li>
+                        <li><a id="talleL" href="#">L</a></li>
+                        <li><a id="talleXL" href="#">XL</a></li>
+                        <li><a id="talleXXL" href="#">XXL</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Color</a>
+                    <ul class="submenu submenu-final">
+                        <li><a id="colorNegro" href="#">Negro</a></li>
+                        <li><a id="colorBlanco" href="#">Blanco</a></li>
+                        <li><a id="colorRojo" href="#">Rojo</a></li>
+                        <li><a id="colorAzul" href="#">Azul</a></li>
+                        <li><a id="colorAmarillo" href="#">Amarillo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Marca</a>
+                    <ul class="submenu submenu-final">
+                        <li><a id="marcaNike" href="#">Nike</a></li>
+                        <li><a id="marcaAdidas" href="#">Adidas</a></li>
+                        <li><a id="marcaReebok" href="#">Reebok</a></li>
+                        <li><a id="marcaPuma" href="#">Puma</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Tipo de prenda</a>
+                    <ul class="submenu submenu-final">
+                        <li><a id="tipoShort" href="#">Short</a></li>
+                        <li><a id="tipoJoggin" href="#">Joggin</a></li>
+                        <li><a id="tipoCamiseta" href="#">Camiseta</a></li>
+                        <li><a id="tipoBuzo" href="#">Buzo</a></li>
+                        <li><a id="tipoCampera" href="#">Campera</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Precio</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <!-- PRODUCTOS -->
+    <div class="container-products-section" id="front"></div>
+    
+    <!-- Carrito -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0.00</p>
+        <button class="btn-fin" onclick="closeCart()">Cerrar</button>
+        <button class="btn-fin" onclick="finalizePurchase()">Finalizar compra</button>
+    </div>
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);" onclick="closeCart()"></div>
+</body>
+</html>

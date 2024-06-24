@@ -1,0 +1,244 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 20px 40px;
+}
+header figure .logo{
+    width: 100px;
+    cursor: pointer;
+}
+h1{
+    color: #ffff;
+}
+header .carrito-login{
+    display: flex;
+    gap: 30px;
+}
+header figure .carrito{
+    width: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+header figure img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+header button{
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+}
+header button a{
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.3s;
+    color: white;
+}
+header button:hover{
+    transform: scale(1.1);
+}
+
+.menu {
+    list-style-type: none;
+    background-color: #c7553b;
+    display: flex;
+    justify-content: center;
+}
+.menu > li {
+    position: relative;
+}
+.menu li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu li a:hover {
+    background-color: #241c1c;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 1;
+    list-style: none;
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu li:hover > .submenu,
+.submenu li:hover > .submenu {
+    display: block;
+}
+
+.submenu-final{
+    background-color: #7d7d7d;
+}
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-name {
+    font-weight: bold;
+    color: white;
+}
+
+#logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* LogIn */
+
+
+/* PRODUCTOS */
+
+.container-products-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+.container-producto{
+    width: 30%;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #575757;
+    background-color: #c1c1c1;
+}
+
+@media (max-width: 500px){
+    .container-producto{
+        width: 100%;
+    }
+}
+
+figure .img-articulo{
+    width: 250px;
+    box-shadow: 2px 2px 10px #333;
+}
+.info-producto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.nombre-articulo{
+    font-size: 20px;
+    font-weight: bold;
+}
+.precio-articulo{
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgb(140, 140, 140);
+}
+.button-cart{
+    width: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-self: center;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    cursor: pointer;
+    background: #c7553b;
+    transition: 0.3s;
+    box-shadow: 2px 2px 10px #333;
+}
+.button-cart:hover{
+    transform: scale(0.9);
+}
+.body-login{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.body-login, .container-login{
+    flex: 0 1;
+}
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 30%;
+    height: 30%;
+    background-color: #b3b3b3;
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px;
+}
+
+form label, form input, form a {
+    width: 70%;
+    text-align: left;
+}
+
+.btn-ingreso{
+    width: 30%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-self: center;
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    cursor: pointer;
+    background: #c7553b;
+    transition: 0.3s;
+    box-shadow: 2px 2px 10px #333;
+}
+
+.btn-form{
+    width: 30%;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-form:hover{
+    background-color: #333;
+    color: white;
+}
